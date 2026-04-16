@@ -1,34 +1,31 @@
+![Status](https://img.shields.io/badge/status-active-success)
+![Backend](https://img.shields.io/badge/backend-Node.js-green)
+![Frontend](https://img.shields.io/badge/frontend-JavaScript-blue)
+![Deployment](https://img.shields.io/badge/deployed-Render-purple)
+
 # AI Financial Insights Engine for Smart Decision Making
 
 An end-to-end full-stack system that transforms raw financial transaction data into actionable insights, spending analytics, and next-month predictions to support smarter financial decisions.
 
-## 🎯 Objective
 This project is designed to:
 - Convert raw transaction CSV data into structured analytics
 - Help users understand spending behavior clearly
 - Provide insight-led support for better financial planning
 
-## ⚙️ Tech Stack
-### Frontend
-- HTML
-- CSS
-- JavaScript
-- Chart.js
+## 🚀 Live Demo
 
-### Backend
-- Node.js
-- Express
-- Multer (file upload)
-- csv-parser
+🔗 https://your-app-name.onrender.com
 
-### Data & Security
-- Rule-based categorization and analytics
-- CSV parsing with validation
-- Input validation for date/amount
-- XSS-safe frontend rendering (`textContent`)
-- Strict file validation (`.csv` + `text/csv`)
+> Upload a CSV file to see real-time financial insights and analytics.
+
+## 📸 Screenshots
+
+![Landing Page](assets/landing.png)
+![Dashboard](assets/dashboard.png)
+![Analytics](assets/graph.png)
 
 ## 🧩 Features
+
 - Upload CSV file
 - Automatic CSV parsing
 - Expense categorization
@@ -38,6 +35,44 @@ This project is designed to:
 - Next-month spending prediction
 - Error handling for invalid/empty data
 - Demo dataset support (`/api/demo`)
+
+### ⚙️ Tech Stack
+
+#### Frontend
+- HTML
+- CSS
+- JavaScript
+- Chart.js
+
+#### Backend
+- Node.js
+- Express
+- Multer (file upload)
+- csv-parser
+
+#### Data & Security
+- Rule-based categorization and analytics
+- CSV parsing with validation
+- Input validation for date/amount
+- XSS-safe frontend rendering (`textContent`)
+- Strict file validation (`.csv` + `text/csv`)
+
+### 📈 Output
+After upload, the user sees:
+- **Total Spending**
+- **Transaction Count**
+- **Category Breakdown** (Chart.js doughnut chart)
+- **Monthly Trend** (Chart.js line chart)
+- **Generated Insights** (human-readable recommendations)
+- **Prediction** (next-month estimate + explanation)
+- **Recent Transactions** table
+
+### 🧠 Key Highlights
+- ✅ End-to-end working full-stack pipeline
+- ✅ Handles invalid rows and edge-case CSV input gracefully
+- ✅ Secure upload and rendering practices
+- ✅ Clean UX with real-time analysis flow
+- ✅ Practical, hackathon-ready decision-support MVP
 
 ## 🏗️ Architecture
 ```text
@@ -77,7 +112,7 @@ This project is designed to:
 7. A spending prediction for the next month is calculated.
 8. JSON response is rendered on the dashboard (cards, charts, insights, table).
 
-## 🧪 Sample Input (CSV)
+### 🧪 Sample Input (CSV)
 ```csv
 date,description,amount
 2026-01-05,Coffee shop,200
@@ -86,31 +121,8 @@ date,description,amount
 2026-02-10,Amazon order,500
 ```
 
-## 📈 Output
-After upload, the user sees:
-- **Total Spending**
-- **Transaction Count**
-- **Category Breakdown** (Chart.js doughnut chart)
-- **Monthly Trend** (Chart.js line chart)
-- **Generated Insights** (human-readable recommendations)
-- **Prediction** (next-month estimate + explanation)
-- **Recent Transactions** table
-
-## 🧠 Key Highlights
-- ✅ End-to-end working full-stack pipeline
-- ✅ Handles invalid rows and edge-case CSV input gracefully
-- ✅ Secure upload and rendering practices
-- ✅ Clean UX with real-time analysis flow
-- ✅ Practical, hackathon-ready decision-support MVP
-
-## 🚀 Future Improvements
-- AI/ML-based transaction categorization
-- Multi-user authentication and profiles
-- Database-backed historical tracking
-- Advanced forecasting models (seasonality/time-series)
-- Downloadable reports (PDF/CSV summaries)
-
 ## ▶️ How To Run
+
 ### Prerequisites
 - Node.js 18+ (recommended)
 - npm
@@ -136,15 +148,23 @@ You can configure CORS origins:
 set CORS_ORIGIN=http://localhost:5000,http://localhost:5500
 ```
 
-## 📸 Screenshots
-> Add project screenshots here:
-- Upload Page UI
-- Dashboard with charts
-- Insights and prediction output
+## 🧪 How to Test
 
-## 🧑‍💻 Author
-- **Name:** Shubh  
-- **Role:** Full Stack Developer
+1. Upload a sample CSV file  
+2. View:
+   - Spending breakdown  
+   - Insights  
+   - Predictions  
 
----
+> Sample CSV included in repo.
+
+## 🚀 Future Improvements
+
+- AI/ML-based transaction categorization
+- Multi-user authentication and profiles
+- Database-backed historical tracking
+- Advanced forecasting models (seasonality/time-series)
+- Downloadable reports (PDF/CSV summaries)
+
+
 If this project helped or inspired you, feel free to star it and share feedback.
