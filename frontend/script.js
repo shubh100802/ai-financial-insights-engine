@@ -2,11 +2,7 @@
 const STORAGE_KEY = "financialInsightsData";
 let categoryChartRef = null;
 let monthlyChartRef = null;
-const API_BASE_URL =
-  window.location.protocol === "file:" ||
-  !window.location.origin.includes("localhost:5000")
-    ? "http://localhost:5000"
-    : "";
+const API_BASE_URL = "";
 
 // ========== DATA PROCESSING ==========
 const formatCurrency = (value) =>
