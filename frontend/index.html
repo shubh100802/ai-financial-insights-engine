@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Financial Insights Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body data-page="upload">
+    <!-- ========== BACKGROUND DECOR ========== -->
+    <div class="bg-orb orb-1" aria-hidden="true"></div>
+    <div class="bg-orb orb-2" aria-hidden="true"></div>
+    <div class="bg-orb orb-3" aria-hidden="true"></div>
+
+    <!-- ========== UPLOAD PAGE ========== -->
+    <main class="page upload-page">
+      <!-- ========== HEADER ========== -->
+      <section class="hero-grid">
+        <section class="hero">
+          <p class="badge">Hackathon MVP - Data Analytics & Insights</p>
+          <h1>AI Financial Insights Engine</h1>
+          <p>
+            Upload your transaction CSV to unlock analytics, insights, and smart
+            spending recommendations.
+          </p>
+          <p class="muted hero-note">
+            Turn raw transactions into insights, predictions, and focused action points.
+          </p>
+
+          <div class="hero-pills">
+            <span>Auto Categorization</span>
+            <span>Trend Detection</span>
+            <span>Prediction Engine</span>
+          </div>
+        </section>
+
+        <aside class="card preview-card">
+          <h3>What You Get Instantly</h3>
+          <ul class="preview-list">
+            <li>Total spending and category-wise split</li>
+            <li>Month-over-month trend and key insights</li>
+            <li>Next month spend estimate with explanation</li>
+          </ul>
+          <div class="stat-row">
+            <div>
+              <strong>5 MB</strong>
+              <span>max file size</span>
+            </div>
+            <div>
+              <strong>Real-time</strong>
+              <span>analysis</span>
+            </div>
+            <div>
+              <strong>Secure</strong>
+              <span>validated upload</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ========== UPLOAD SECTION ========== -->
+      <section class="card upload-card">
+        <h2>Upload CSV</h2>
+        <p class="muted">Required columns: <strong>date, description, amount</strong></p>
+
+        <form id="uploadForm" class="upload-form">
+          <label for="csvFile" id="dropZone" class="drop-zone">
+            <span class="drop-title">Drop CSV here or click to browse</span>
+            <span class="drop-subtitle">Only .csv files are accepted</span>
+          </label>
+          <input id="csvFile" name="file" type="file" accept=".csv" required />
+
+          <div class="actions-row">
+            <button id="analyzeBtn" type="submit" class="btn-primary">Analyze File</button>
+            <button id="demoBtn" type="button" class="btn-secondary">Use Demo Data</button>
+          </div>
+        </form>
+
+        <p id="uploadStatus" class="status muted"></p>
+      </section>
+    </main>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="./script.js"></script>
+  </body>
+</html>
