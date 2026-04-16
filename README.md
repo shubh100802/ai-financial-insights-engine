@@ -14,7 +14,7 @@ This project is designed to:
 
 ## 🚀 Live Demo
 
-🔗 https://your-app-name.onrender.com
+🔗 https://ai-financial-insights-engine.onrender.com/
 
 > Upload a CSV file to see real-time financial insights and analytics.
 
