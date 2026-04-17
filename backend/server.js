@@ -20,7 +20,7 @@ if (!fs.existsSync(UPLOAD_DIR)) {
 // ========== MIDDLEWARE CONFIGURATION ==========
 const allowedOrigins = (
   process.env.CORS_ORIGIN ||
-  "http://localhost:5000,http://127.0.0.1:5500,http://localhost:5500"
+  ""
 )
   .split(",")
   .map((item) => item.trim())
@@ -29,11 +29,18 @@ const allowedOrigins = (
 app.use(
   cors({
     origin(origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin) {
         callback(null, true);
         return;
       }
-      callback(new Error("Origin not allowed by CORS"));
+      // If CORS_ORIGIN is not provided, allow all origins (useful for simple deployments).
+      if (allowedOrigins.length === 0 || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+      const corsError = new Error("Origin not allowed by CORS");
+      corsError.statusCode = 400;
+      callback(corsError);
     },
     methods: ["GET", "POST"],
   })
